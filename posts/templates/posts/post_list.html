@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+  <title>All posts</title>
+{% endblock %}
+
+{% block content %} 
+  {% if post_list %}
+    {% for post in post_list %}
+      <p>{{ post.content }}</p>
+    {% endfor %}
+  {% endif %}
+{% endblock %}
